@@ -1,4 +1,4 @@
-//Ejercicio Iván
+//Ejercicio Iván Soria
 
 #define PIN_LED_1 4
 #define PIN_LED_2 5
@@ -29,3 +29,5 @@ void loop() {
   }
   delay(100);
 }
+
+//Fin
