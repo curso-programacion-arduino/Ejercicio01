@@ -16,18 +16,21 @@ void setup() {
 
 void loop() {
 
-  digitalWrite(PIN_LED_1, HIGH);
-  digitalWrite(PIN_LED_2, HIGH);
-  digitalWrite(PIN_LED_3, HIGH);
-  digitalWrite(PIN_LED_4, HIGH);      
-  Serial.println("LEDs ON");
-  delay(500);
-  digitalWrite(PIN_LED_1, LOW);
-  digitalWrite(PIN_LED_2, LOW);
-  digitalWrite(PIN_LED_3, LOW);
-  digitalWrite(PIN_LED_4, LOW);      
-  Serial.println("LEDs OFF");
-  delay(500);
+  for (int i=PIN_LED_1;i<PIN_LED_4;i++){
+    digitalWrite(i, HIGH);   
+    delay(100);
+    digitalWrite(i, LOW);
+    delay(100);  
+  }
+
+  for (int i=PIN_LED_4;i>=PIN_LED_1;i--){
+    digitalWrite(i, HIGH);   
+    delay(100);
+    digitalWrite(i, LOW);
+    delay(100);  
+  }
+
+  delay(100);
 
 
 
