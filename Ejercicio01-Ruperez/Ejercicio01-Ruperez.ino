@@ -1,14 +1,35 @@
 #define PIN_LED_1 4
-
+#define PIN_LED_2 5 //PWM
+#define PIN_LED_3 6 //PWM
+#define PIN_LED_4 7
 void setup() {
   // put your setup code here, to run once:
-pinMode(PIN_LED_1, OUTPUT);
+  pinMode(PIN_LED_1, OUTPUT);
+  pinMode(PIN_LED_2, OUTPUT);
+  pinMode(PIN_LED_3, OUTPUT);
+  pinMode(PIN_LED_4, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-digitalWrite (PIN_LED_1, HIGH);
-delay(500);
-digitalWrite (PIN_LED_1, LOW);
-delay(500);
+  for (int i = 4; i < 7; i++) {
+    digitalWrite (i, HIGH);
+    delay(50);
+    digitalWrite (i, LOW);
+    delay(50);
+  }
+  digitalWrite (PIN_LED_4, HIGH);
+  delay(50);
+  digitalWrite (PIN_LED_4, LOW);
+  delay(50);
+  for (int i = 7; i > 4; i--) {
+    digitalWrite (i, HIGH);
+    delay(50);
+    digitalWrite (i, LOW);
+    delay(50);
+  }
+  digitalWrite (PIN_LED_1, HIGH);
+  delay(50);
+  digitalWrite (PIN_LED_1, LOW);
+  delay(50);
 }
