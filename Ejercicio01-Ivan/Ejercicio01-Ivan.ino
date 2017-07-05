@@ -1,17 +1,29 @@
 //Ejercicio Iván
 
-#define PIN_LED 4
+#define PIN_LED_1 4
+#define PIN_LED_2 5
+#define PIN_LED_3 6
+#define PIN_LED_4 7
+
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(PIN_LED, OUTPUT);
-  digitalWrite(PIN_LED, 0);
+  for (int i = PIN_LED_1; i <= PIN_LED_4; i++) {
+    pinMode(i, OUTPUT);
+  }
+
+
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(PIN_LED, 1);
+  for (int i = PIN_LED_1; i <= PIN_LED_4; i++) {
+    digitalWrite(i, 1);
+  }
   delay(1000);
-  digitalWrite(PIN_LED, 0);
+  for (int i = PIN_LED_1; i <= PIN_LED_4; i++) {
+    digitalWrite(i, 0);
+  }
+  delay(1000);
 }
