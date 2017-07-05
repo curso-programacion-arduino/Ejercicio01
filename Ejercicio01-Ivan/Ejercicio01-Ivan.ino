@@ -20,10 +20,12 @@ void loop() {
   // put your main code here, to run repeatedly:
   for (int i = PIN_LED_1; i <= PIN_LED_4; i++) {
     digitalWrite(i, 1);
+    delay(100);
   }
-  delay(1000);
-  for (int i = PIN_LED_1; i <= PIN_LED_4; i++) {
+  delay(100);
+  for (int i = PIN_LED_4; i >= PIN_LED_1; i--) {
     digitalWrite(i, 0);
+    delay(100);
   }
-  delay(1000);
+  delay(100);
 }
